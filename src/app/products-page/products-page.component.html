@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="title">PRODUCTS LIST</div>
+    <div class="">
+        <select class="select" id="sort-by" (change)="sort($event)">
+    <option value="High">Show High to Low Price</option>
+    <option value="Low">Show Low to High Price</option>
+</select>
+
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <!-- <th scope="col">ListImagePath</th> -->
+                <th scope="col">Collection</th>
+                <th scope="col">Price</th>
+                <th scope="col">ProductTitle</th>
+                <th scope="col">StyleName</th>
+                <th scope="col">StyleNumber</th>
+                <th scope="col">NetQuantity</th>
+                <th scope="col">ProductCode</th>
+                <th scope="col">AvailableSizes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prod of productdetails, let i=index">
+                <td>{{i+1}}</td>
+                <!-- <td><img [src]="prod.ListImagePath" alt="image" height="100" width="100" /></td> -->
+                <td>{{prod.Collection}}</td>
+                <td>{{prod.Price}}</td>
+                <td>{{prod.ProductTitle}}</td>
+                <td>{{prod.StyleName}}</td>
+                <td>{{prod.StyleNumber}}</td>
+                <td>{{prod.NetQuantity}}</td>
+                <td>{{prod.ProductCode}}</td>
+                <td>{{prod.AvailableSizes}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
